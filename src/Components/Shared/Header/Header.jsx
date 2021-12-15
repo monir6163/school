@@ -77,7 +77,12 @@ function Header() {
                             <MenuIcon />
                         </IconButton>
                         <Typography className={navLogo} variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                            News
+                            <Link to="/" style={{ textDecoration: "none", color: "#fff" }}>
+                                <Button color='inherit'>
+                                    <img src="https://i.ibb.co/h7F4p9C/logo.png" style={{ width: "80px", height: "80px", marginRight: "10px" }} alt="" /> ধুনট সরকারি এন. ইউ পাইলট মডেল উচ্চ বিদ্যালয় <br /> ধুনট উপজেলা, বগুড়া - ৫৮৫০ EIIN - ১১৯৩৩২
+                                </Button>
+                                <br />
+                            </Link>
                         </Typography>
                         <Box className={navItems}>
                             <Button color='inherit'>
