@@ -2,6 +2,8 @@ import { Button, Container, Grid, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
+import { Link } from 'react-router-dom';
+import Notiche from '../../Notiche/Notiche';
 
 const History = () => {
     return (
@@ -9,7 +11,7 @@ const History = () => {
             <Container>
                 <Grid container spacing={2}>
                     <Grid item xs={12} md={8}>
-                        <Typography variant='h6' component='div' sx={{ color: '#001E3C', textAlign: 'center', fontWeight: 900, mb: 3 }}>
+                        <Typography variant='h6' component='div' sx={{ color: '#001E3C', textAlign: 'left', fontWeight: 900, mb: 3 }}>
                             এক নজরে ধুনট সরকারি এন. ইউ পাইলট মডেল উচ্চ বিদ্যালয়ের ইতিহাস
                         </Typography>
                         <Box sx={{ textAlign: 'center' }}>
@@ -23,13 +25,21 @@ const History = () => {
                         <Typography variant='h6' component='div' sx={{ color: '#001E3C', fontWeight: 900, mb: 3, textAlign: 'center' }}>
                             ২০২২ শিক্ষাবর্ষে শিক্ষার্থী ভর্তি
                         </Typography>
-                        <Typography variant='p' component='div' sx={{ color: '#001E3C', fontWeight: '500', textAlign: 'justify', mb: 5 }}>
-                            ধুনট সরকারী এন,ইউ পাইলট মডেল উচ্চ বিদ্যালয়ের ২০২২ শিক্ষাবর্ষে শিক্ষার্থী অনলাইন ভর্তির ফলাফল
-                            এর জন্য নিচের বাটনটি চাপুন।
+                        <Typography variant='p' component='div' sx={{ color: '#001E3C', fontWeight: '500', textAlign: 'center', mb: 5 }}>
+                            ধুনট সরকারী এন,ইউ পাইলট মডেল উচ্চ বিদ্যালয়ের ২০২২ শিক্ষাবর্ষে শিক্ষার্থী অনলাইন ভর্তির <br /> <span style={{ fontSize: '18px', fontWeight: 'bold' }}>ফলাফল
+                                এর জন্য নিচের বাটনটি চাপুন।</span>
                         </Typography>
-                        <Button variant="contained" sx={{ fontWeight: 900 }}>
-                            <MenuBookIcon />&nbsp; অনলাইন ভর্তি ২০২২ এর ফলাফল
-                        </Button>
+                        <Box sx={{ textAlign: 'center' }}>
+                            <Link to='/getresult' style={{ textDecoration: 'none', textAlign: 'center' }}>
+                                <Button variant="contained" sx={{ fontWeight: 900, mb: 5 }}>
+                                    <MenuBookIcon />&nbsp; অনলাইন ভর্তি ২০২২ এর ফলাফল
+                                </Button>
+                            </Link>
+                        </Box>
+                        <Typography variant='h6' component='div' sx={{ color: '#001E3C', fontWeight: 900, mb: 3, textAlign: 'center' }}>
+                            নোটিশ বোর্ড
+                        </Typography>
+                        <Notiche />
                     </Grid>
                 </Grid>
             </Container>
