@@ -1,0 +1,11 @@
+@media (max-width:600px){
+    .headtext{
+        margin-left:0px !important;
+    }
+    .headtitle {
+        text-align: center;
+    }
+    .headimg {
+        text-align: center;
+    }
+}

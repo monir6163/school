@@ -3,6 +3,7 @@ import Header from "./Components/Shared/Header/Header";
 import Home from "./Components/Home/Home";
 import Notiche from "./Components/Notiche/Notiche";
 import Contact from "./Components/Contact/Contact";
+import Footer from "./Components/Shared/Footer/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/notich" element={<Notiche />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
       </Routes>
+      <Footer />
     </div>
   );
 }

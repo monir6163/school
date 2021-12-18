@@ -2,11 +2,18 @@
     max-width: 620px;
     margin: auto;
     padding: 0;
+    overflow: hidden;
   }
-
   #nt-example1-container {
     text-align: center;
+    overflow-y: hidden;
   }
+  @media (max-width:600px){
+    #nt-example1-container {
+      text-align: center;
+      overflow-y: hidden !important;
+    }
+}
 
   #nt-example1-container i {
     font-size: 18px;
@@ -33,6 +40,7 @@
     font-size: 18px;
     text-align: center;
     border-bottom: 1px dotted #2c8162;
+    overflow-y: hidden;
   }
 
   #nt-example1 li:hover {

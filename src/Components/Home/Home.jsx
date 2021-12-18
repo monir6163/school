@@ -1,4 +1,5 @@
 import React from 'react';
+import HeadMaster from './HeadMaster/HeadMaster';
 import History from './History/History';
 import Slide from './Slider/Slide';
 
@@ -7,6 +8,7 @@ const Home = () => {
         <>
             <Slide />
             <History />
+            <HeadMaster />
         </>
     );
 };

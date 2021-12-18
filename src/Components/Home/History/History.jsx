@@ -31,14 +31,11 @@ const History = () => {
                         </Typography>
                         <Box sx={{ textAlign: 'center' }}>
                             <Link to='/getresult' style={{ textDecoration: 'none', textAlign: 'center' }}>
-                                <Button variant="contained" sx={{ fontWeight: 900, mb: 5 }}>
+                                <Button variant="contained" sx={{ fontWeight: 900 }}>
                                     <MenuBookIcon />&nbsp; অনলাইন ভর্তি ২০২২ এর ফলাফল
                                 </Button>
                             </Link>
                         </Box>
-                        <Typography variant='h6' component='div' sx={{ color: '#001E3C', fontWeight: 900, mb: 3, textAlign: 'center' }}>
-                            নোটিশ বোর্ড
-                        </Typography>
                         <Notiche />
                     </Grid>
                 </Grid>
