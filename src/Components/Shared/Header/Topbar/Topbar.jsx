@@ -16,7 +16,7 @@ const Topbar = () => {
                             <FacebookIcon />
                         </Link>
                     </Typography>
-                    <Box sx={{ display: 'flex', alignContent: 'center', justifyContent: 'space-between' }}>
+                    <Box sx={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-around', textAlign: 'right' }}>
                         <Typography variant="p">
                             <CallIcon sx={{ fontSize: '15px' }} />{" "}
                             <span style={{ fontSize: '14px' }}>+8801747706163</span>

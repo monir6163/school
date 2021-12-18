@@ -34,6 +34,16 @@ function Header() {
                 display: "none"
             }
         },
+        navText: {
+            [theme.breakpoints.down('sm')]: {
+                display: "none"
+            }
+        },
+        logoText: {
+            [theme.breakpoints.down('sm')]: {
+                fontSize: '12px'
+            }
+        },
         navLogo: {
             [theme.breakpoints.down('sm')]: {
                 textAlign: "right"
@@ -42,15 +52,9 @@ function Header() {
         mobileNav: {
             color: "#000",
             textDecoration: "none"
-        },
-        app: {
-            backgroundColor: 'red'
-        },
-        notApp: {
-            backgroundColor: 'blue'
         }
     })
-    const { navItem, navIcon, navItems, navLogo, mobileNav } = useStyle();
+    const { navItem, navIcon, navItems, navLogo, mobileNav, navText, logoText } = useStyle();
     const [state, setState] = React.useState(false);
     const list = (
         <Box
@@ -102,9 +106,15 @@ function Header() {
                         <Typography className={navLogo} variant="h6" component="div" sx={{ flexGrow: 1 }}>
                             <Link to="/" style={{ textDecoration: "none", color: "#fff" }}>
                                 <Button color='inherit'>
-                                    <img src="https://i.ibb.co/h7F4p9C/logo.png" style={{ width: "80px", height: "80px", marginRight: "10px" }} alt="" /> ধুনট সরকারি এন. ইউ পাইলট মডেল উচ্চ বিদ্যালয় <br /> ধুনট উপজেলা, বগুড়া - ৫৮৫০ EIIN - ১১৯৩৩২
+                                    <img src="https://i.ibb.co/h7F4p9C/logo.png" style={{ width: "80px", height: "80px", marginRight: "10px" }} alt="" />
+                                    <span sx={{ display: 'inline-block' }}>
+                                        <Typography sx={{ fontWeight: 'bold' }} variant='h6' className={logoText}>
+                                            ধুনট সরকারি এন. ইউ পাইলট মডেল উচ্চ বিদ্যালয়
+                                        </Typography>  <Typography variant='p' component='div' className={navText} sx={{ textAlign: 'left' }}>
+                                            ধুনট উপজেলা, বগুড়া - ৫৮৫০ EIIN - ১১৯৩৩২
+                                        </Typography>
+                                    </span>
                                 </Button>
-                                <br />
                             </Link>
                         </Typography>
                         <Box className={navItems}>
