@@ -1,4 +1,5 @@
 .topbar {
     height: 40px !important;
 }
+
 @media (min-width:600px){.css-1t29gy6-MuiToolbar-root{min-height:0px !important;}}

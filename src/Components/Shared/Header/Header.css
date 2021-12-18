@@ -1,0 +1,9 @@
+.main {
+    position: static !important;
+}
+.mainSticky {
+    position: -webkit-sticky !important;
+}
+.top {
+    position: static !important;
+}

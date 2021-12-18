@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 import { makeStyles } from '@mui/styles';
 import { useTheme } from "@mui/material";
 import Topbar from './Topbar/Topbar';
+import './Header.css';
 
 function Header() {
     const theme = useTheme();
@@ -41,14 +42,14 @@ function Header() {
         mobileNav: {
             color: "#000",
             textDecoration: "none"
+        },
+        app: {
+            backgroundColor: 'red'
+        },
+        notApp: {
+            backgroundColor: 'blue'
         }
     })
-    const useStyles = makeStyles({
-        root: {
-            flexGrow: 1
-        },
-    });
-    const classes = useStyles();
     const { navItem, navIcon, navItems, navLogo, mobileNav } = useStyle();
     const [state, setState] = React.useState(false);
     const list = (
@@ -62,51 +63,63 @@ function Header() {
                 <Divider />
                 <ListItem button><ListItemText><Link className={mobileNav} to="/notich"> নোটিশ বোর্ড</Link>  </ListItemText></ListItem>
                 <Divider />
-                <ListItem button><ListItemText><Link className={mobileNav} to="/notich"> যোগাযোগ</Link>  </ListItemText></ListItem>
+                <ListItem button><ListItemText><Link className={mobileNav} to="/contact"> যোগাযোগ</Link>  </ListItemText></ListItem>
                 <Divider />
             </List>
         </Box >
     );
+    const [stickyClass, setStickyClass] = React.useState(false);
+    const handleScroll = () => {
+        if (window.scrollY >= 80) {
+            setStickyClass(true)
+        }
+        else {
+            setStickyClass(false)
+        }
+    };
+    React.useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return (
         <>
             <Topbar />
             <Box sx={{ flexGrow: 1 }}>
-                <div className={classes.root}>
-                    <AppBar position="sticky">
-                        <Toolbar>
-                            <IconButton
-                                size="large"
-                                edge="start"
-                                color="inherit"
-                                aria-label="menu"
-                                sx={{ mr: 2 }}
-                                className={navIcon}
-                                onClick={() => setState(true)}
-                            >
-                                <MenuIcon />
-                            </IconButton>
-                            <Typography className={navLogo} variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                                <Link to="/" style={{ textDecoration: "none", color: "#fff" }}>
-                                    <Button color='inherit'>
-                                        <img src="https://i.ibb.co/h7F4p9C/logo.png" style={{ width: "80px", height: "80px", marginRight: "10px" }} alt="" /> ধুনট সরকারি এন. ইউ পাইলট মডেল উচ্চ বিদ্যালয় <br /> ধুনট উপজেলা, বগুড়া - ৫৮৫০ EIIN - ১১৯৩৩২
-                                    </Button>
-                                    <br />
-                                </Link>
-                            </Typography>
-                            <Box className={navItems}>
+                <AppBar className={`${!stickyClass && 'main'} ${setStickyClass && 'mainSticky'}`}>
+                    <Toolbar>
+                        <IconButton
+                            size="large"
+                            edge="start"
+                            color="inherit"
+                            aria-label="menu"
+                            sx={{ mr: 2 }}
+                            className={navIcon}
+                            onClick={() => setState(true)}
+                        >
+                            <MenuIcon />
+                        </IconButton>
+                        <Typography className={navLogo} variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                            <Link to="/" style={{ textDecoration: "none", color: "#fff" }}>
                                 <Button color='inherit'>
-                                    <Link className={navItem} to="/home">হোম</Link>
+                                    <img src="https://i.ibb.co/h7F4p9C/logo.png" style={{ width: "80px", height: "80px", marginRight: "10px" }} alt="" /> ধুনট সরকারি এন. ইউ পাইলট মডেল উচ্চ বিদ্যালয় <br /> ধুনট উপজেলা, বগুড়া - ৫৮৫০ EIIN - ১১৯৩৩২
                                 </Button>
-                                <Button color='inherit'>
-                                    <Link className={navItem} to="/notich">নোটিশ বোর্ড</Link>
-                                </Button>
-                                <Button color='inherit'>
-                                    <Link className={navItem} to="/contact">যোগাযোগ</Link>
-                                </Button>
-                            </Box>
-                        </Toolbar>
-                    </AppBar>
-                </div>
+                                <br />
+                            </Link>
+                        </Typography>
+                        <Box className={navItems}>
+                            <Button color='inherit'>
+                                <Link className={navItem} to="/home">হোম</Link>
+                            </Button>
+                            <Button color='inherit'>
+                                <Link className={navItem} to="/notich">নোটিশ বোর্ড</Link>
+                            </Button>
+                            <Button color='inherit'>
+                                <Link className={navItem} to="/contact">যোগাযোগ</Link>
+                            </Button>
+                        </Box>
+                    </Toolbar>
+                </AppBar>
             </Box>
             <Box>
                 <React.Fragment>

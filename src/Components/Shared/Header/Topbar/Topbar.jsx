@@ -9,7 +9,7 @@ import './Topbar.css';
 const Topbar = () => {
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="sticky" sx={{ backgroundColor: '#2EAE72' }}>
+            <AppBar className='top' sx={{ backgroundColor: '#2EAE72' }}>
                 <Toolbar className='topbar'>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         <Link to='' style={{ color: '#fff', lineHeight: '1' }}>
