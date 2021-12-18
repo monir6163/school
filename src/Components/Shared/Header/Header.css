@@ -7,3 +7,7 @@
 .top {
     position: static !important;
 }
+.logotext{
+    font-size:16px !important;
+}
+@media (max-width:600px){.logotext{font-size:12px !important;}}

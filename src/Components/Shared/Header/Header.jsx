@@ -39,11 +39,6 @@ function Header() {
                 display: "none"
             }
         },
-        logoText: {
-            [theme.breakpoints.down('sm')]: {
-                fontSize: '12px'
-            }
-        },
         navLogo: {
             [theme.breakpoints.down('sm')]: {
                 textAlign: "right"
@@ -54,7 +49,7 @@ function Header() {
             textDecoration: "none"
         }
     })
-    const { navItem, navIcon, navItems, navLogo, mobileNav, navText, logoText } = useStyle();
+    const { navItem, navIcon, navItems, navLogo, mobileNav, navText } = useStyle();
     const [state, setState] = React.useState(false);
     const list = (
         <Box
@@ -108,7 +103,7 @@ function Header() {
                                 <Button color='inherit'>
                                     <img src="https://i.ibb.co/h7F4p9C/logo.png" style={{ width: "80px", height: "80px", marginRight: "10px" }} alt="" />
                                     <span sx={{ display: 'inline-block' }}>
-                                        <Typography sx={{ fontWeight: 'bold' }} variant='h6' className={logoText}>
+                                        <Typography sx={{ fontWeight: 'bold' }} className='logotext'>
                                             ধুনট সরকারি এন. ইউ পাইলট মডেল উচ্চ বিদ্যালয়
                                         </Typography>  <Typography variant='p' component='div' className={navText} sx={{ textAlign: 'left' }}>
                                             ধুনট উপজেলা, বগুড়া - ৫৮৫০ EIIN - ১১৯৩৩২

@@ -37,12 +37,18 @@
     height: auto;
     padding: 10px;
     list-style: none;
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
     border-bottom: 1px dotted #2c8162;
     overflow-y: hidden;
   }
-
+  #nt-example1 div:before {
+    content: "\f18e";
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: 1em;
+    width: 1.3em;
+}
   #nt-example1 li:hover {
     background: #fff;
   }

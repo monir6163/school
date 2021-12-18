@@ -22,12 +22,12 @@ const Notiche = () => {
                     rowHeight={100}
                     maxRows={3}
                     duration={2000}>
-                    <div><span style={{ color: 'red', fontWeight: 'bold' }}>1.</span> There are no articles in this category. If subcategories display on this page, they may have articles. <Link to=''>Read More</Link></div>
-                    <div><span style={{ color: 'red', fontWeight: 'bold' }}>2.</span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus provident porro ea minus <Link to=''>Read More</Link></div>
-                    <div><span style={{ color: 'red', fontWeight: 'bold' }}>3.</span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus provident porro ea minus <Link to=''>Read More</Link></div>
-                    <div><span style={{ color: 'red', fontWeight: 'bold' }}>4.</span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus provident porro ea minus <Link to=''>Read More</Link></div>
-                    <div><span style={{ color: 'red', fontWeight: 'bold' }}>5.</span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus provident porro ea minus <Link to=''>Read More</Link></div>
-                    <div><span style={{ color: 'red', fontWeight: 'bold' }}>6.</span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus provident porro ea minus <Link to=''>Read More</Link></div>
+                    <div> আগামী নির্বাচনী পরীক্ষা ৩১ মার্চের পরিবর্তে ৫ জুন অনুষ্ঠিত হবে <Link to=''>Read More</Link></div>
+                    <div> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus provident porro ea minus <Link to=''>Read More</Link></div>
+                    <div> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus provident porro ea minus <Link to=''>Read More</Link></div>
+                    <div> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus provident porro ea minus <Link to=''>Read More</Link></div>
+                    <div> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus provident porro ea minus <Link to=''>Read More</Link></div>
+                    <div> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus provident porro ea minus <Link to=''>Read More</Link></div>
                 </NewsTicker>
                 <i className="fa fa-arrow-down"
                     id="nt-example1-next"
