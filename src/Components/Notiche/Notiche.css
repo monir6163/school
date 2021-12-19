@@ -1,54 +1,36 @@
-#nt-example1 {
-    max-width: 620px;
-    margin: auto;
-    padding: 0;
-    overflow: hidden;
-  }
-  #nt-example1-container {
-    text-align: center;
-    overflow-y: hidden;
-  }
-  @media (max-width:600px){
-    #nt-example1-container {
-      text-align: center;
-      overflow-y: hidden !important;
-    }
+.notich-box {
+  max-width: 620px;
+  margin: auto;
+  overflow: hidden;
+  background: #ebebeb;
+  padding-bottom: 10px;
+  padding-right: 5px;
+  margin-bottom: 10px;
+  height: 380px;
 }
-
-  #nt-example1-container i {
-    font-size: 18px;
-    margin: 8px;
-    cursor: pointer;
-    -webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -ms-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
-  }
-
-  #nt-example1-container i:hover {
-    color: #333;
-  }
-
-  #nt-example1 li {
-    color: #4e4e4e;
-    background: #f2f2f2;
-    overflow: hidden;
-    height: auto;
-    padding: 10px;
-    list-style: none;
-    font-size: 16px;
-    text-align: center;
-    border-bottom: 1px dotted #2c8162;
-    overflow-y: hidden;
-  }
-  #nt-example1 div:before {
-    content: "\f18e";
-    font-family: FontAwesome;
-    display: inline-block;
-    margin-left: 1em;
-    width: 1.3em;
+.notich-box ul {
+  overflow: hidden;
+  margin-top: 10px;
+  text-align: center;
 }
-  #nt-example1 li:hover {
-    background: #fff;
-  }
+.notich-box ul li {
+  padding-top: 8px!important;
+  padding-bottom: 8px!important;
+  list-style: none;
+}
+.notich-box li:before {
+  content: "\f18e";
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -2.5em;
+  width: 1.3em;
+}
+.notich-box ul li a {
+  font-size: 15px;
+  color: #3e3d3c;
+  line-height: auto;
+  text-decoration: none;
+}
+.notich-box ul li a:hover {
+  color: blue;
+}
